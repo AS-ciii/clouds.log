@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lato:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans&display=swap');
+
+/* dark-mode color vars*/
+:root{
+    --bg: #222;
+    --text: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*body properties*/
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+/*light-mode*/
+.light-mode{
+    --bg: #fff;
+    --text: #222;
+}
+
+/*div with all elements*/
+.container{
+    width: 30vw;
+    height: 12vw;
+    background: var(--bg);
+    padding: 25px;
+    border-radius: 1.3vw;
+}
+
+/*header div*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*logo and name div*/
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*logo*/
+#cloud{
+    width: 2.2vw;
+    height: 1.4vw;
+    filter: brightness(0) invert(1) grayscale(100%);
+}
+
+/*name*/
+.app-name{
+    font-size: 1.3vw;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text);
+}
+
+/*all buttons div*/
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*social buttons*/
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    color: var(--bg);
+    background-color: var(--text);
+    height: 1.7vw;
+    width: 1.7vw;
+    font-size: 1.3vw;
+    margin-left: 1.6vw;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.social:hover{
+    transform: scale(1.3);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.social:active{
+    transform: scale(1.2);
+}
+
+/*mode toggle button*/
+.mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 1.4vw;
+    width: 1.4vw;
+    border-radius: 8%;
+    margin-left: 20px;
+    font-size: 1.1vw;
+    color: var(--text);
+    background-color: var(--bg);
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.mode:hover{
+    transform: scale(1.2);
+}
+
+.mode:active{
+    transform: scale(1);
+}
+
+/*search bar div*/
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5vw;
+    width: 100%;
+}
+
+/*icon and text div*/
+.textfield-container{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/*text to enter*/
+.textfield{
+    outline: none;
+    padding: 10px 10px 10px 24px;
+    width: 21vw;
+    height: 2.6vw;
+    border: 2px solid #222;
+    border-radius: 50px;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1vw;
+    color: #222;
+    background: #fff;
+    margin-right: 15px;
+    text-align: left;
+}
+
+.textfield::placeholder{
+    position: absolute;
+    color: #333;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    text-align: center;
+    left: auto;
+}
+
+/*location icon*/
+#loc{
+    position: absolute;
+    font-size: 1vw;
+    color: #111;
+    margin-left: .6vw;
+    z-index: 2;
+}
+
+/*search button*/
+.search_glass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    width: 2.4vw;
+    height: 2.4vw; 
+    background: var(--text);
+    color: var(--bg);
+    cursor: pointer;
+    font-size: 1.3vw;
+    transition: transform .3s ease;
+}
+
+.search_glass:hover{
+    transform: scale(1.05);
+}
+
+.search_glass:active{
+    transform: scale(1);
+}
+
+/*main temp info div*/
+.weather-info{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5vw;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*city and country name*/
+.city{
+    color: var(--text);
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+#location-icon{
+    margin-right: 5px;
+    font-size: 1.1vw;
+    color: var(--text);
+}
+
+/*city temp*/
+.Temperature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4.4vw;
+}
+
+.celsius{
+    margin-left: 6px;
+}
+
+.degree{
+    vertical-align: super;
+    font-size: 55%;
+}
+
+/*weather status*/
+.condition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.3vw;
+}
+
+#weather{
+    margin-right: 7px;
+}
+
+/*boxes*/
+.other-info{
+    margin-top: 2.8vw;
+    display: grid;
+    grid-template-columns: repeat(3, 8vw);
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.1vw;
+}
+
+/*sub-info div*/
+.box{
+    color: var(--bg);
+    background-color: var(--text);
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 8%;
+    font-size: 1.2vw;
+}
+
+/*sub-info icons*/
+.other-info i{
+    font-size: 1.9vw;
+    margin-bottom: .6vw;
+}
+
+/*sub-info txt*/
+.humidity, .wind-s, .visibility{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    margin-top: 1.6vw;
+}
+
+/*responsive*/
+@media (max-width: 1024px) {
+    .container{
+        width: 90%;
+        height: 33vw;
+        padding: 4vw;
+    }
+    
+    #cloud{
+        width: 8vw;
+        height: 4.9vw;
+    }
+
+    .app-name{
+        font-size: 4vw;
+    }
+    
+    .social{
+        height: 5.5vw;
+        width: 5.5vw;
+        font-size: 4.2vw;
+        margin-left: 4vw;
+    }
+
+    .mode{
+        height: 5.5vw;
+        width: 5.5vw;
+        font-size: 3.5vw;
+        margin-left: 4vw;
+    } 
+    
+    .search{
+        margin-top: 7vw;
+    }
+
+    .textfield{
+        width: 70vw;
+        height: 6.5vw;
+        font-size: 3.1vw;
+        padding-left: 4.5vw;
+    }
+    
+    .textfield::placeholder{
+        font-size: 2.7vw;
+        left: 4.3vw;
+        top: 1.1vw;
+    }
+
+    #loc{
+        font-size: 2.5vw;
+        margin-left: 1.7vw;
+    } 
+
+    .search_glass{
+        width: 6vw;
+        height: 6vw;
+        font-size: 4vw;
+    }
+    
+    .search_glass:hover{
+        transform: scale(1.1);
+    }
+    
+    .weather-info{
+        margin-top: 4.5vw;
+    }
+
+    .city{
+        font-size: 3.2vw;
+    }
+    
+    #location-icon{
+        margin-right: 7px;
+        font-size: 2.3vw;
+    }
+    
+    .Temperature{
+        margin-top: 1vw;
+        font-size: 9vw;
+    }
+    
+    .condition{
+        font-size: 2.5vw;
+    }
+    
+    #weather{
+        margin-right: 7px;
+    }
+    
+    .other-info{
+        margin-top: 4.8vw;
+        column-gap: 2.1vw;
+        grid-template-columns: repeat(3, 25vw);
+    }
+    
+    .box{
+        width: 100%;
+        height: 25vw;
+        font-size: 3.2vw;
+    }
+    
+    .other-info i{
+        font-size: 6vw;
+        margin-bottom: 1vw;
+    }
+    
+    .humidity, .wind-s, .visibility{
+        font-size: 2.8vw;
+        margin-top: 4vw;
+    }
+}

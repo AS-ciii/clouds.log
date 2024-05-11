@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouds.log - Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app">
+                 <img src="cloud_logo.png" alt="clouds.log" id="cloud">
+                 <h1 class="app-name">clouds.log</h1>
+            </div> 
+            <div class="buttons">
+                <button class="social" onclick="window.location.href='//github.com/AS-ciii'"><i class='bx bxl-github' ></i></button>
+                <button class="social" onclick="window.location.href='//www.linkedin.com/in/ajay-shenoy-p-095612171'"><i class='bx bxl-linkedin' ></i></button>
+                <button class="social" onclick="window.open('//www.instagram.com/ajay_sp18?igsh=MWwwZng0eWR1M3J6cA==', '_blank')"><i class='bx bxl-instagram' ></i></button>
+                <button class="mode" id="mode"><i class='bx bxs-moon' ></i></button>
+            </div>
+        </div>
+        <div class="search">
+            <div class="textfield-container">
+                <i class='bx bxs-edit-location' id="loc"></i>
+                <input type="text"  class="textfield" placeholder="Enter the name of the city.." spellcheck="false">
+            </div>    
+            <button class="search_glass"><i class='bx bx-search-alt'></i></button>
+        </div>
+        <div class="weather-info">
+            <div class="location"></div>
+            <div class="Temperature"></div>
+            <div class="condition"></div>
+        </div>
+        <div class="other-info">
+            <div class="box b1"></div>
+            <div class="box b2"></div>
+            <div class="box b3"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
